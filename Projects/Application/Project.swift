@@ -1,4 +1,5 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 let project = Project(
     name: "MyApp",
@@ -15,7 +16,11 @@ let project = Project(
             ),
             sources: ["Sources/**"],
             resources: ["Resources/**"],
-            dependencies: []
+            dependencies: [
+                .Module.common,
+                .Module.featureA,
+                .Module.featureB
+            ]
         ),
         .target(
             name: "MyAppTests",

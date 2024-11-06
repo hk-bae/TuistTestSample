@@ -1,4 +1,6 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
+
 
 let project = Project(
     name: "FeatureB",
@@ -9,7 +11,7 @@ let project = Project(
             product: .staticFramework,
             bundleId: "io.tuist.FeatureB",
             sources: ["Sources/**"],
-            dependencies: []
+            dependencies: [.Module.common]
         ),
         .target(
             name: "FeatureBTests",
