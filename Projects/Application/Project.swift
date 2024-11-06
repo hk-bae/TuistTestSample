@@ -13,8 +13,8 @@ let project = Project(
                     "UILaunchStoryboardName": "LaunchScreen.storyboard",
                 ]
             ),
-            sources: ["MyApp/Sources/**"],
-            resources: ["MyApp/Resources/**"],
+            sources: ["Sources/**"],
+            resources: ["Resources/**"],
             dependencies: []
         ),
         .target(
@@ -23,7 +23,7 @@ let project = Project(
             product: .unitTests,
             bundleId: "io.tuist.MyAppTests",
             infoPlist: .default,
-            sources: ["MyApp/Tests/**"],
+            sources: ["Tests/**"],
             resources: [],
             dependencies: [.target(name: "MyApp")]
         ),
